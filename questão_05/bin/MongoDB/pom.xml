@@ -24,6 +24,7 @@
 <url>https://github.com/mongodb/mongo-java-driver</url>
 </scm>
 <dependencies>
+
 <dependency>
 <groupId>org.slf4j</groupId>
 <artifactId>slf4j-api</artifactId>
@@ -67,4 +68,16 @@
 <optional>true</optional>
 </dependency>
 </dependencies>
+<build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <mainClass>MongoDB.Conection</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
