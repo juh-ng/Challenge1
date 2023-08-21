@@ -19,14 +19,14 @@ public class Connection {
 			 private static final Logger LOGGER = Logger.getLogger(Connection.class.getName());
 
 			
-			//Construtor
+			
 			public Connection()  {
 				try {
-					//conectando ao mongoDB 
+					
 					mongoClient = new MongoClient("localhost",27017);
-					//criando o banco de dados
+					
 					dataBase = mongoClient.getDatabase("Q_05");
-					//criando a coleção "pessoa"
+					
 					Person = dataBase.getCollection("Person");
 					
 					System.out.println("Conexão efetuada com sucesso");
@@ -34,10 +34,10 @@ public class Connection {
 				} catch (MongoSocketException e) {
 					LOGGER.log(Level.SEVERE, null, e);
 					
-					//bloco para tratamento de excessões
+					
 				}
 			}
-				//método criado para retornar um valor verdadeiro caso a insersão tenha sido bem sucedida
+				
 				public boolean insert() {
 					try {
 			            Document address = new Document("zip",1234)
